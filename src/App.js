@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom"
+import Minesweeper from "./pages/Minesweeper/Minesweeper"
+import Undefined from "./pages/Undefined/Undefined"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          1234124124
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/"           exact component={Minesweeper}/>
+        <Route path="/undefined"  exact component={Undefined}/>
+        <Redirect to="/undefined"/>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

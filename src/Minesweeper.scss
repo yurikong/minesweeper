@@ -1,0 +1,63 @@
+$naval-mine-bg: url("./img/naval-mine.png");
+// $flag-bg:       url("../../img/flag.png");
+$flag-bg:       url("./img/flag.svg");
+
+.minesweeper{
+    background: black;
+    position: relative;
+    .minesweeper-board{
+        // padding: 10px;
+        tbody{
+            tr{
+                td{
+                    border: 1px solid rgb(151, 145, 145);
+                    box-sizing: border-box;
+                    height: 35px;
+                    width: 35px;
+                    font-size: 26px;
+                    color:white;
+                }
+                .border{
+                    background: yellow !important;
+                }
+                .null{
+                    background: #979595;
+                    // box-shadow: 10px 8px 6px -6px black;
+                }
+                .zero{
+                    // box-shadow: inset 0 0 7px 5px rgb(67, 98, 75);
+                    background:  #464343;
+                    border: 0.2px solid rgb(126, 114, 114);;
+                    // background:  yellow;
+                }
+                .bomb{
+                    background: rgb(255, 0, 0);
+                    background-image: $naval-mine-bg;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    // background-size: auto;
+                }
+                .flag{
+                    // background: #998484;
+                    background-image: $flag-bg;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                .number{
+                    font-family: courier new;
+                    text-align: center;
+                    background: #272626 !important;
+                }
+                .safe{
+                    background: rgb(3, 90, 3) !important;
+                }
+            }
+        }
+    }
+    .minesweeper-kb{
+        font-size: 10px;
+        font-family: courier new;
+        column-count: 3;
+        color: white;
+    }
+}
